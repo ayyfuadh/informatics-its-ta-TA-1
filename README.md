@@ -1,75 +1,103 @@
 # 🏁 Tugas Akhir (TA) - Final Project
 
-**Nama Mahasiswa**: [Nama Lengkap]  
-**NRP**: [Nomor Registrasi Pokok]  
-**Judul TA**: [Judul Tugas Akhir]  
-**Dosen Pembimbing**: [Nama Dosen]  
-**Dosen Ko-pembimbing**: [Nama Dosen]
+**Nama Mahasiswa**: Layyinatul Fuadah  
+**NRP**: 5025211207  
+**Judul TA**: Pengembangan Fitur Klasifikasi Ikan pada Aplikasi Mobile Kebun Binatang Menggunakan Transfer Learning  
+**Dosen Pembimbing**: Ir. Adhatus Solichah Ahmadiyah, S.Kom., M.Sc.  
+**Dosen Ko-pembimbing**: Ilham Gurat Adillion, S. Kom., M. Eng
 
 ---
+## ZooSite 🐾
+
+ZooSite adalah aplikasi edukasi kebun binatang dengan fitur klasifikasi gambar hewan dan interaksi melalui chatbot. Aplikasi ini dikembangkan sebagai bagian dari Tugas Akhir yang telah dikembangkan oleh penulis-penulis sebelumnya.
 
 ## 📺 Demo Aplikasi  
-Embed video demo di bawah ini (ganti `VIDEO_ID` dengan ID video YouTube Anda):  
 
-[![Demo Aplikasi](https://i.ytimg.com/vi/zIfRMTxRaIs/maxresdefault.jpg)](https://www.youtube.com/watch?v=VIDEO_ID)  
+[![Demo Aplikasi](https://i.ytimg.com/vi/qc_k0OdLX1I/maxresdefault.jpg)](https://www.youtube.com/watch?v=qc_k0OdLX1I)  
 *Klik gambar di atas untuk menonton demo*
 
 ---
 
 *Konten selanjutnya hanya merupakan contoh awalan yang baik. Anda dapat berimprovisasi bila diperlukan.*
-
+## 🚀 Fitur Utama
+- Peta Kebun Binatang
+- Chatbot Edukatif
+- Klasifikasi Hewan dengan Gambar
+- Pengenalan Suara Hewan
+---
 ## 🛠 Panduan Instalasi & Menjalankan Software  
 
 ### Prasyarat  
 - Daftar dependensi (contoh):
-  - Python 3.10+
-  - Node.js v18+
-  - MySQL 8.0
-  - [Lainnya...]
+  - Flutter SDK minimal versi 3.32.0
+  - NAndroid Studio atau VS Code
+  - Git
+  - Emulator Android atau perangkat fisik
 
 ### Langkah-langkah  
 1. **Clone Repository**  
    ```bash
    git clone https://github.com/Informatics-ITS/TA.git
    ```
-2. **Instalasi Dependensi**
+2. Download Resources model:
+  - [✅ Download Model Kusumo, 2023](https://drive.google.com/file/d/xxxxxxxx/view?usp=sharing)
+  - [✅ Download Model Auliya, 2024](https://drive.google.com/file/d/yyyyyyyy/view?usp=sharing)
+  - [✅ Download Model Fuadah, 2025](https://drive.google.com/file/d/zzzzzzzz/view?usp=sharing)
+
+3. Buat folder [models] baru didalam folder [asset]:
    ```bash
-   cd [folder-proyek]
-   pip install -r requirements.txt  # Contoh untuk Python
-   npm install  # Contoh untuk Node.js
-   ```
-3. **Konfigurasi**
-- Salin/rename file .env.example menjadi .env
-- Isi variabel lingkungan sesuai kebutuhan (database, API key, dll.)
-4. **Jalankan Aplikasi**
+    mkdir -p assets/models
+   
+4. Salin semua file model yang sudah di download ke dalam folder [models] dan pastikan nama nya sama.
+  - kusumo_model.tflite
+  - auliya_model.tflite
+  - fuadah_model.tflite
+  
+5. Pastikan sudah mendownload flutter dengan version minimal [3.32.0]. untuk cara ceknya:
    ```bash
-   python main.py  # Contoh untuk Python
-   npm start      # Contoh untuk Node.js
+    flutter --version
    ```
-5. Buka browser dan kunjungi: `http://localhost:3000` (sesuaikan dengan port proyek Anda)
+    jika masih dibawah versi tersebut, maka langsung upgrade ke versi paling baru
+    ```bash
+      flutter --upgrade
+     ```
+6. Setelah semua step diatas berhasil, maka langsung run:
+   ```bash
+    flutter pub get
 
+7. Instalasi selesai. untuk menjalankan maka tinggal run saja melalui IDE masing-masing, atau dengan:
+   ```bash
+    flutter run
 ---
+## ⚠️ Kendala
 
-## 📚 Dokumentasi Tambahan
-
-- [![Dokumentasi API]](docs/api.md)
-- [![Diagram Arsitektur]](docs/architecture.png)
-- [![Struktur Basis Data]](docs/database_schema.sql)
-
+- ✅ Saat ini aplikasi **hanya bisa dibuild dalam format `.apk`** untuk Android dan diuji langsung di emulator atau perangkat fisik.
+- ❌ Untuk platform **iOS (`.ipa`) belum dapat dilakukan build langsung**, karena:
+  - Membutuhkan akses ke **TestFlight** untuk distribusi dan pengujian.
+  - Perlu **akun Apple Developer** berbayar (USD 99/tahun) untuk dapat membangun dan menjalankan aplikasi di perangkat iOS fisik maupun distribusi via App Store.
+  
+> **Solusi sementara**: Fokus pengujian pada platform Android. Untuk distribusi iOS, akan dilakukan jika akses Apple Developer tersedia.
 ---
+## 📚 Referensi & Kredit
 
-## ✅ Validasi
+Pengembangan fitur klasifikasi hewan dalam aplikasi ini mengacu pada hasil penelitian dan kontribusi dari penulis sebelumnya:
 
-Pastikan proyek memenuhi kriteria berikut sebelum submit:
-- Source code dapat di-build/run tanpa error
-- Video demo jelas menampilkan fitur utama
-- README lengkap dan terupdate
-- Tidak ada data sensitif (password, API key) yang ter-expose
+1. **Cikanindi, Vania (2022)**  
+   Penerapan Universal Sentence Encoder (Use) Untuk Location-Aware Chatbot Pada Aplikasi Layanan Wisata Kebun Binatang.  
+   [Undergraduate Tesis](https://repository.its.ac.id/94474/)
 
+2. **Kusumo, Naufaliando Yudo (2023)**  
+   Pengembangan Fitur Klasifikasi Hewan pada Aplikasi Wisata Kebun Binatang dengan Algoritma CNN.  
+   [Undergraduate Tesis](https://repository.its.ac.id/104229/)
+
+3. **Auliya, Maisan (2024)**  
+   Perbaikan Klasifikasi Hewan pada Aplikasi Mobile Kebun Binatang dengan Transfer Learning.  
+   [Undergraduate Tesis](https://repository.its.ac.id/111053/)  
+
+> Jika kamu menggunakan proyek ini dalam penelitian atau pengembangan lain, mohon cantumkan referensi kepada penulis-penulis di atas.
 ---
-
 ## ⁉️ Pertanyaan?
 
 Hubungi:
-- Penulis: [email@mahasiswa]
-- Pembimbing Utama: [email@pembimbing]
+- Penulis: layyinatul7@gmail.com
+- Pembimbing Utama: adhatus@gmail.com
